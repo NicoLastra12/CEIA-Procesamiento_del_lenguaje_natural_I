@@ -1,0 +1,36 @@
+# --- Entorno de Python (uv) --------------------------------------------------
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# --- Jupyter -----------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Datos, corpus y modelos -------------------------------------------------
+# Los datasets se descargan desde las notebooks; no se suben al repo.
+data/
+*.csv
+*.parquet
+*.pkl
+*.joblib
+*.zip
+
+# Embeddings y modelos entrenados (Gensim, Keras)
+*.model
+*.kv
+*.npy
+*.bin
+*.h5
+*.keras
+
+# Recursos que descargan NLTK y spaCy si se apuntan al proyecto
+nltk_data/
+
+# --- Editores y sistema operativo --------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
