@@ -2,7 +2,7 @@
 name = "ceia-procesamiento-del-lenguaje-natural-i"
 version = "0.1.0"
 requires-python = ">=3.12,<3.13"
-
+ 
 # Librerías que usan los desafíos (las versiones exactas quedan en uv.lock)
 dependencies = [
     "gensim>=4.4",
@@ -14,30 +14,18 @@ dependencies = [
     "scikit-learn>=1.5",
     "seaborn>=0.13",
 ]
-
+ 
 [dependency-groups]
 dev = [
     "ipykernel>=6.29",
-    "pytest>=8",
 ]
 # Redes neuronales (desafíos 3 en adelante). Se instala con: uv sync --group deep
 deep = [
     "tensorflow>=2.18",
 ]
-
-# El paquete src/pln se instala en modo editable con uv sync,
-# así las notebooks lo importan sin tocar sys.path
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/pln"]
-
+ 
+# El repo no es un paquete instalable: las funciones viven dentro de cada notebook
 [tool.uv]
+package = false
 default-groups = ["dev"]
-
-[tool.pytest.ini_options]
-# Los tests importan el paquete pln igual que las notebooks
-pythonpath = ["src"]
-testpaths = ["tests"]
+ 
