@@ -9,8 +9,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # --- Datos, corpus y modelos -------------------------------------------------
-# Los datasets se descargan desde las notebooks; no se suben al repo.
+# Los datasets grandes se descargan desde las notebooks; no se suben al repo.
 data/
+# Excepción: corpus chicos versionados para reproducibilidad (Don Quijote, Desafío 2)
+!docs/data/
 *.csv
 *.parquet
 *.pkl
