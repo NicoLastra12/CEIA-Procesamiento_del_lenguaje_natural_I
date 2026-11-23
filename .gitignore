@@ -11,7 +11,7 @@ __pycache__/
 # --- Datos, corpus y modelos -------------------------------------------------
 # Los datasets grandes se descargan desde las notebooks; no se suben al repo.
 data/
-# Excepción: corpus chicos versionados para reproducibilidad (Don Quijote, Desafío 2)
+# Excepción: corpus chicos versionados para reproducibilidad (Don Quijote, Desafíos 2 y 3)
 !docs/data/
 *.csv
 *.parquet
@@ -26,6 +26,8 @@ data/
 *.bin
 *.h5
 *.keras
+# Excepción: modelos del Desafío 3, versionados para poder generar sin reentrenar
+!docs/models/*.keras
 
 # Recursos que descargan NLTK y spaCy si se apuntan al proyecto
 nltk_data/
